@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Blackspacer | Utsav Narayan Singh</title>
+    <style type="text/css">
+    html, body {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Segoe UI',Tahoma,Verdana,Arial;
+    color: #222;
+    width: 100%;
+    height: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6, span {
+    display: block;
+    font-weight: 100;
+    text-align: center;
+    }
+
+    h1 {
+    font-size: 5em;
+    }
+
+    h2 {
+    font-size: 2em;
+    }
+
+    .full-page {
+    width: 70%;
+    min-height: 90%;
+    padding:0% 15% 5% 15%;
+    display: inline-block;
+    text-align: center;
+    }
+
+    .site-navigation {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(255,255,255,0.8);
+    display: block;
+    }
+
+    .site-navigation ul {
+        list-style: none;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .site-navigation li {
+        display: inline;
+        width: 14%;
+        height: 5%;
+        padding: 1%;
+        margin: 2%;
+        line-height: 3;
+    }
+
+        .site-navigation li a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+    #sayhello input,textarea {
+    width: 30%;
+    height: 5%;
+    margin: 1%;
+    padding: 1%;
+    }
+
+    #message{
+    height:25% !important;
+    }
+
+    @media (max-width: 800px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .site-navigation {
+        height: 30%;
+    }
+
+        .site-navigation li a {
+            text-decoration: none;
+            font-size: 1em;
+            color: #333;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+    <section class="full-page" id="aboutme">
+        <h1>Blackspacer</h1>
+
+        <h2>Utsav Narayan Singh</h2>
+
+        <h4>Part time audiophile, cinephile, philospher and full time
+        <em>NIHILIST</em>.</h4>
+    </section>
+
+    <section class="full-page" id="past">
+        <h1>Past</h1>
+
+        <h4>1991</h4><span>Born in Bhoapl, Madhya Pradesh, India</span>
+
+        <h4>1991-1997</h4><span>Lived in Asrarhi, Bhabhua, Bihar</span>
+
+        <h4>1998-1999</h4><span>S. B. Siksha Niketan, Varanasi</span>
+
+        <h4>1999-2001</h4><span>International Hindu School, Varanasi</span>
+
+        <h4>2001-2002</h4><span>Bal Bharti School, Allahabad</span>
+
+        <h4>2002-2003</h4><span>International Hindu School, Varanasi</span>
+
+        <h4>2003-2006</h4><span>St. John's DLW, Varanasi</span>
+
+        <h4>2006-2008</h4><span>City Montessori School Gomtinagar,
+        Lucknow</span>
+
+        <h4>2008-2009</h4><span>L-1 Coaching Center, Varanasi</span>
+
+        <h4>2009-2013</h4><span>Ajay Kumar Garg Engineering College,
+        Ghaziabad</span>
+    </section>
+
+    <section class="full-page" id="present">
+        <h1>Present</h1>
+
+        <h2>2013 -</h2><span>Associate Software Engineer</span><span>MAQ
+        Software, Hyderabad</span>
+    </section>
+
+    <section class="full-page" id="future">
+        <h1>"Future</h1>
+
+        <h2>is uncertain and the end is always near."</h2><span>- Jim
+        Morrison</span>
+    </section>
+
+    <section class="full-page" id="sayhello">
+        <h1>Say hello !!!</h1><input id="name" placeholder="Your name" type=
+        "text"><br>
+        <input id="email" placeholder="and email address" type="text"><br>
+        <textarea cols="20" id="message" placeholder="and your hello?" rows=
+        "4">
+</textarea><br>
+        <input id="mailme" type="button" value="Tell me.">
+    </section>
+
+    <nav class="site-navigation">
+        <ul>
+            <li>
+                <a href="#aboutme">About me</a>
+            </li>
+
+            <li>
+                <a href="#past">Past</a>
+            </li>
+
+            <li>
+                <a href="#present">Present</a>
+            </li>
+
+            <li>
+                <a href="#future">Future</a>
+            </li>
+
+            <li>
+                <a href="#sayhello">Say hello !!!</a>
+            </li>
+        </ul>
+    </nav><script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> <script type="text/javascript">
+    $(document).ready(function(){
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+                    || location.hostname == this.hostname) {
+
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
